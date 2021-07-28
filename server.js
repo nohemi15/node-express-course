@@ -11,11 +11,11 @@ const mockUserData = [
 
 ]
 
-app.get('/users', function(req, res){
+app.get('/users:id', function(req, res){
 	res.json({
 		success: true,
 		massage: 'successfully got users. Nice!',
-		users: mockUserData
+		users: req.params.id
 	})
 })
 
